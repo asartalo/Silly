@@ -26,9 +26,12 @@ class Silly
         return realpath(__DIR__);
     }
 
-    public static function getController(Tasks $tasks)
+    public static function getController(Tasks $tasks, $cwd = null)
     {
-        $controller = new Controller(new Interpreter, new Executor(new Utilities), getcwd());
+        if (!$cwd) {
+            $cwd = getcwd();
+        }
+        $controller = new Controller(new Interpreter, new Executor(new Utilities), $cwd);
         $controller->register($tasks);
         return $controller;
     }

@@ -21,4 +21,22 @@ class SillyTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(realpath(__DIR__ . '/../../../../src/Silly'), Silly::getSourcePath());
     }
 
+    public function testGettingController()
+    {
+        $tasks = $this->getMock('Silly\Tasks');
+        $this->assertInstanceOf('\Silly\Controller', Silly::getController($tasks));
+    }
+
+    public function testGettingControllerSetsWorkingDirectoryByDefault()
+    {
+        $controller = Silly::getController($this->getMock('Silly\Tasks'));
+        $this->assertEquals(getcwd(), $controller->getWorkingDirectory());
+    }
+
+    public function testGettingControllerSettingWorkingDirectory()
+    {
+        $controller = Silly::getController($this->getMock('Silly\Tasks'), '/foo/bar');
+        $this->assertEquals('/foo/bar', $controller->getWorkingDirectory());
+    }
+
 }
