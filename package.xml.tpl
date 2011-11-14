@@ -21,8 +21,8 @@ Silly helps you create php-based commandline scripts.
 <date><?php echo $date ?></date>
 <time><?php echo $time ?></time>
 <version>
-  <release>0.1.0</release>
-  <api>0.1.0</api>
+  <release>0.2.0</release>
+  <api>0.2.0</api>
 </version>
 <stability>
 <release>beta</release>
