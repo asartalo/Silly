@@ -3,8 +3,6 @@ namespace Silly\Tests\Unit\Cli;
 
 require realpath(__DIR__ . '/../../../bootstrap.php');
 
-require_once $src_path . '/Silly/Executor.php';
-
 use \Silly\Command;
 use \Silly\Executor;
 use \Silly\Utilities;

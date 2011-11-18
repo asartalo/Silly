@@ -3,9 +3,6 @@ namespace Silly\Tests\Unit\Cli;
 
 require realpath(__DIR__ . '/../../../bootstrap.php');
 
-require_once $src_path . '/Silly/Command.php';
-require_once $src_path . '/Silly/Controller.php';
-
 use \Silly\Command;
 use \Silly\Executor;
 use \Silly\Controller;

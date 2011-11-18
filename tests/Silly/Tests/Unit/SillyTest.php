@@ -4,8 +4,6 @@ namespace Silly\Tests\Unit\Cli;
 
 require realpath(__DIR__ . '/../../../bootstrap.php');
 
-require_once realpath(__DIR__ . '/../../../../src/Silly/Silly.php');
-
 use \Silly\Silly;
 
 class SillyTest extends \PHPUnit_Framework_TestCase

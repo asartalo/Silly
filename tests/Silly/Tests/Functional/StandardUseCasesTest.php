@@ -4,11 +4,6 @@ namespace Silly\Tests\Functional;
 
 require realpath(__DIR__ . '/../../../bootstrap.php');
 
-require_once $src_path . '/Silly/Silly.php';
-require_once 'DummyTasksList.php';
-require_once $tests_path . '/Silly/Tests/ArgvParser.php';
-
-
 use \Silly\Tests\ArgvParser;
 use \Silly\Silly;
 

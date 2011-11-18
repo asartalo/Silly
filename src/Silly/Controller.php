@@ -2,13 +2,9 @@
 
 namespace Silly;
 
-require_once 'Interpreter.php';
-require_once 'Executor.php';
-require_once 'Tasks.php';
-
 class Controller {
 
-  private $interpreter, $executor, $cwd, $out_first;
+  private $interpreter, $executor, $cwd;
 
   function __construct(Interpreter $interpreter, Executor $executor, $cwd) {
     $this->interpreter = $interpreter;

@@ -2,10 +2,6 @@
 
 namespace Silly;
 
-require_once 'Command.php';
-require_once 'Utilities.php';
-require_once __DIR__ . '/Exception/UndefinedTask.php';
-
 use \Silly\Command;
 use \Silly\Utilities;
 use \Silly\Exception\UndefinedTask as ExceptionUndefinedTask;

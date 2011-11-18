@@ -2,12 +2,6 @@
 
 namespace Silly;
 
-require_once 'Controller.php';
-require_once 'Interpreter.php';
-require_once 'Executor.php';
-require_once 'Utilities.php';
-require_once 'Tasks.php';
-
 /**
 * Silly and the silly Silly manager. Use this to get information about Silly.
 * Copy?

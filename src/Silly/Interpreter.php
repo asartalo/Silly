@@ -2,8 +2,6 @@
 
 namespace Silly;
 
-require_once 'Command.php';
-
 use \Silly\Command;
 
 class Interpreter {
