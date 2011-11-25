@@ -12,7 +12,7 @@ class Command {
     $arguments = array();
 
   function __construct(array $options) {
-    foreach(
+    foreach (
       array('caller', 'command', 'namespace', 'flags', 'arguments')
       as $name
     ) {

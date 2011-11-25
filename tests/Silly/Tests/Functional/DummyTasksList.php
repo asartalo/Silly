@@ -20,9 +20,19 @@ class DummyTasksList implements Tasks
         $this->controller = $controller;
     }
 
-    public function taskSayHello()
+    /**
+     * Says hello. Pass a name, and it'll be greeted.
+     *
+     * @param string $name your name
+     */
+    public function taskSayHello($name = '')
     {
-        $this->controller->out('Hello!');
+        if ($name) {
+            $say = "Hello, $name!";
+        } else {
+            $say = "Hello!";
+        }
+        $this->controller->out($say);
     }
 
 }

@@ -54,8 +54,7 @@ class Executor {
     }
   }
 
-  private function isRegisteredNamespace($namespace)
-  {
+  private function isRegisteredNamespace($namespace) {
     return array_key_exists($namespace, $this->tasklists_n);
   }
 
