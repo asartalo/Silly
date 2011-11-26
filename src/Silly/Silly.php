@@ -10,20 +10,20 @@ class Silly {
 
   private static $version = '0.1b';
 
-  public static function getVersion() {
+  static function getVersion() {
     return self::$version;
   }
 
-  public static function getSourcePath() {
+  static function getSourcePath() {
     return realpath(__DIR__);
   }
 
-  public static function getController(Tasks $tasks, $cwd = null) {
+  static function getController(Tasks $tasks, $cwd = null) {
     if (!$cwd) {
       $cwd = getcwd();
     }
     $controller = new Controller(
-        new Interpreter, new Executor(new Utilities), $cwd
+      new Interpreter, new Executor(new Utilities), $cwd
     );
     $controller->register($tasks);
     return $controller;
