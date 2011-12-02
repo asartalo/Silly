@@ -7,7 +7,6 @@ Usage
 -----
 
 ```php
-<?php
 // my-silly-test.php
 require_once 'Silly\Silly.php'; // or wherever you placed Silly
 
@@ -34,7 +33,6 @@ class MyCoolTasks implements Tasks
 $controller = \Silly\Silly::getController(new MyCoolTasks);
 // Okay, run it!
 $controller->execute($argv);
-?>
 ```
 
 Then on your terminal, run that silly little thing!
