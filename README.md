@@ -6,6 +6,21 @@ Silly is a PHP-based tool for quickly creating commandline scripts.
 Quick Guide
 -----------
 
+### Install
+
+Through Pear
+```
+$ pear channel-discover pear.brainchildprojects.org
+$ pear install brainchild/Silly
+```
+
+OR clone source
+
+```
+$ git clone git://github.com/asartalo/Silly.git
+```
+
+### Write Tasks
 ```php
 <?php
 // my-silly-test.php
@@ -36,7 +51,7 @@ $controller = \Silly\Silly::getController(new MyCoolTasks);
 $controller->execute($argv);
 ```
 
-Then on your terminal, run that silly little thing!
+### Run!
 
 ```
 $ php my-silly-test.php say-hello
