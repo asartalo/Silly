@@ -1,7 +1,9 @@
 **Silly:** The silly little CLI tool
-==================================
+====================================
 
 Silly is a PHP-based tool for quickly creating commandline scripts.
+
+Silly makes it easy for you to write your script by simply writing a PHP class definition. It's that easy!
 
 Quick Guide
 -----------
@@ -203,7 +205,7 @@ FooBar
 Namespaces
 ----------
 
-Sometimes you'll want to group some tasks and a good way to do that is to segregate them into namespaces. To set the namespace for a task list, <code>Tasks::getTaskNamespace()</code> must return a string. For example...
+Sometimes you'll have a lot of tasks and you'll want to make them manageable. A good way to do that is to group them into namespaces. Each task definition can specify a namespace. To set the namespace for a task list, <code>Tasks::getTaskNamespace()</code> must return a string. For example...
 
 
 ```php
@@ -252,4 +254,5 @@ Roadmap
 -------
 
 * Argument validation
+* Add shortcut flags like -f -s
 * Add documentation through doc comments
