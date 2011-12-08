@@ -57,18 +57,13 @@ $controller->execute($argv);
 
 ```
 $ php my-silly-test.php say-hello
-```
-
-...then you'll get some sweet response.
-
-```
-$ Hello!
+Hello!
 ```
 
 Tasks
 -----
 
-Script commands are defined in your Task list. Task lists only need to implement <code>Silly\Tasks</code> interface which defines a method for obtaining passing the controller object (<code>Silly\Controller</code>), and a method for setting the namespace. When you register a task, the controller is passed before any task method is executed.
+Script commands are defined in your Task list. Task lists only need to implement `Silly\Tasks` interface which defines a method for obtaining passing the controller object (`Silly\Controller`), and a method for setting the namespace. When you register a task, the controller is passed before any task method is executed.
 
 ```php
 <?php
@@ -114,13 +109,13 @@ class FooTasks implements Tasks {
 }
 ```
 
-In the previous example, you can call taskFoo by typing in the terminal:
+In the previous example, you can call `taskFoo` by typing in the terminal:
 
 ```
 $ myscript.php foo
 ```
 
-And you can call taskFooBar by:
+And you can call `taskFooBar` by:
 
 ```
 $ myscript.php foo-bar
