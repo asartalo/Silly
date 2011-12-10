@@ -1,3 +1,6 @@
+This documentation can be found at the [Silly PHP CLI Website](http://silly.brainchildprojects.org).
+
+
 **Silly:** The silly little CLI tool
 ====================================
 
@@ -63,7 +66,7 @@ Hello!
 Tasks
 -----
 
-Script commands are defined in your Task list. Task lists only need to implement `Silly\Tasks` interface which defines a method for obtaining passing the controller object (`Silly\Controller`), and a method for setting the namespace. When you register a task, the controller is passed before any task method is executed.
+Script commands are defined in your Task list. Task lists only need to implement `Silly\Tasks` interface which defines a method for obtaining the controller object (`Silly\Controller`), and a method for setting the namespace. When you register a task, the controller is passed before any task method is executed.
 
 ```php
 <?php
@@ -199,8 +202,7 @@ FooBar
 
 Namespaces
 ----------
-
-Sometimes you'll have a lot of tasks and you'll want to make them manageable. A good way to do that is to group them into namespaces. Each task definition can specify a namespace. To set the namespace for a task list, <code>Tasks::getTaskNamespace()</code> must return a string. For example...
+When you have have a lot of tasks, you'll probably want to make them more manageable. A good way to do that is to group them into namespaces. Each task list can specify a namespace. To set the namespace for a task list, `Tasks::getTaskNamespace()` must return a string. For example...
 
 
 ```php
