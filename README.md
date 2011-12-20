@@ -4,9 +4,9 @@ This documentation can be found at the [Silly PHP CLI Website](http://silly.brai
 **Silly:** The silly little CLI tool
 ====================================
 
-Silly is a PHP-based tool for quickly creating commandline scripts.
+Silly is a PHP-based tool for quickly creating command line scripts.
 
-Silly makes it easy for you to write your script by simply writing a PHP class definition. It's that easy!
+Silly makes creating command line scripts as simple as writing a PHP class definition. It’s so easy, it’s silly!
 
 Quick Guide
 -----------
@@ -24,6 +24,11 @@ OR clone source
 ```
 $ git clone git://github.com/asartalo/Silly.git
 ```
+
+### Requirements
+
+* PHP 5.3+
+* PHP CLI
 
 ### Write Tasks
 ```php
@@ -66,7 +71,7 @@ Hello!
 Tasks
 -----
 
-Script commands are defined in your Task list. Task lists only need to implement `Silly\Tasks` interface which defines a method for obtaining the controller object (`Silly\Controller`), and a method for setting the namespace. When you register a task, the controller is passed before any task method is executed.
+Script commands are defined in your task list. A task list is a PHP class that implements the `Silly\Tasks` interface which defines a method for obtaining the controller object (`Silly\Controller`), and a method for setting the Task List’s namespace. When you register a task, the controller is passed before any task method is executed.
 
 ```php
 <?php
@@ -124,7 +129,7 @@ And you can call `taskFooBar` by:
 $ myscript.php foo-bar
 ```
 
-If you want to pass some arguments to the task method, just define them.
+If you want to pass some arguments to the task method, just define them as method parameters.
 
 ```php
 <?php
@@ -151,7 +156,7 @@ Please note that task methods can only take scalar values from the cli. Also, th
 Do You Want Flags with That?
 ----------------------------
 
-Sometimes you'll want to pass some flags to modify the behavior of a task. Flags can be defined by writing flag methods. Like:
+Sometimes you’ll want to pass some flags to modify the behavior of a task. Flags can be defined by writing flag methods --methods that start with 'flag'. Like:
 
 ```php
 <?php
@@ -202,7 +207,7 @@ FooBar
 
 Namespaces
 ----------
-When you have have a lot of tasks, you'll probably want to make them more manageable. A good way to do that is to group them into namespaces. Each task list can specify a namespace. To set the namespace for a task list, `Tasks::getTaskNamespace()` must return a string. For example...
+When you have have a lot of tasks, you’ll probably want to make them more manageable. A good way to do that is to group them into namespaces. Each task list can specify a namespace. To set the namespace for a task list, `Tasks::getTaskNamespace()` must return the namespace. For example...
 
 
 ```php
