@@ -8,6 +8,13 @@ Silly is a PHP-based tool for quickly creating command line scripts.
 
 Silly makes creating command line scripts as simple as writing a PHP class definition. It’s so easy, it’s silly!
 
+Requirements
+------------
+
+* PHP 5.3+
+* PHP CLI
+
+
 Quick Guide
 -----------
 
@@ -24,11 +31,6 @@ OR clone source
 ```
 $ git clone git://github.com/asartalo/Silly.git
 ```
-
-### Requirements
-
-* PHP 5.3+
-* PHP CLI
 
 ### Write Tasks
 ```php
