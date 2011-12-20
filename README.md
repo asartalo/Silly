@@ -206,7 +206,7 @@ FooBar
 
 Namespaces
 ----------
-When you have have a lot of tasks, you’ll probably want to make them more manageable. A good way to do that is to group them into namespaces. Each task list can specify a namespace. To set the namespace for a task list, `Tasks::getTaskNamespace()` must return the namespace. For example...
+When you have a lot of tasks, a good way to make them more manageable is to group them into namespaces. Each task list can specify a namespace. To set the namespace for a task list, `Tasks::getTaskNamespace()` must return the namespace. For example...
 
 
 ```php
@@ -217,7 +217,7 @@ class FooTasks implements Tasks {
     //...snip...//
 
     function getTaskNamespace() {
-        return '';
+        return ''; // This is the default namespace
     }
 
     function taskFoo() {
