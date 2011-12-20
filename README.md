@@ -43,16 +43,15 @@ class MyCoolTasks implements \Silly\Tasks
 {
     private $controller;
 
-    public function getTaskNamespace() {
+    function getTaskNamespace() {
         return '';
     }
 
-    public function setController(\Silly\Controller $controller) {
+    function setController(\Silly\Controller $controller) {
         $this->controller = $controller;
     }
 
-    public function taskSayHello()
-    {
+    function taskSayHello() {
         $this->controller->out('Hello!');
     }
 }
@@ -84,11 +83,11 @@ class FooTasks implements Tasks {
 
     private $controller;
 
-    public function getTaskNamespace() {
+    function getTaskNamespace() {
         return '';
     }
 
-    public function setController(Silly\Controller $controller) {
+    function setController(Silly\Controller $controller) {
         $this->controller = $controller;
     }
 
@@ -171,7 +170,7 @@ class FooTasks implements Tasks {
 
     //...snip...//
 
-    public function taskFoo() {
+    function taskFoo() {
         $output = "Foo{$this->suffix}";
         if ($this->annoy) {
             for ($i=0; $i < 3; $i++) {
@@ -181,13 +180,11 @@ class FooTasks implements Tasks {
         $this->controller->out($output);
     }
 
-    public function flagSuffix($suffix)
-    {
+    function flagSuffix($suffix) {
         $this->suffix = $suffix;
     }
 
-    public function flagAnnoyMe()
-    {
+    function flagAnnoyMe() {
         $this->annoy = true;
     }
 
@@ -219,11 +216,11 @@ use Silly\Tasks;
 class FooTasks implements Tasks {
     //...snip...//
 
-    public function getTaskNamespace() {
+    function getTaskNamespace() {
         return '';
     }
 
-    public function taskFoo() {
+    function taskFoo() {
         $this->controller->out('Foo!');
     }
 
@@ -232,7 +229,7 @@ class FooTasks implements Tasks {
 class BarTasks implements Tasks {
     //...snip...//
 
-    public function getTaskNamespace() {
+    function getTaskNamespace() {
         return 'bar';
     }
 
