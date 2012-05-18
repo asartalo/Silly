@@ -1,0 +1,16 @@
+{
+    "name": "asar/silly",
+    "type": "library",
+    "description": "Silly is a PHP-based tool for quickly creating command line scripts.",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "authors" : [
+        {
+            "name": "Wayne Duran",
+            "email": "asartalo@projectweb.ph",
+            "role": "Developer",
+            "homepage": "http://www.asartalo.org"
+        }
+    ]
+}
